@@ -1,0 +1,17 @@
+{
+	"name": "tradefurniturecompany/realex"
+	,"version": "0.0.1"
+	,"description": "Modifications of the `realexpayments/hpp` module (Magento 2)"
+	,"type": "magento2-module"
+	,"homepage": "https://github.com/tradefurniturecompany/realex"
+	,"license": "MIT"
+	,"authors": [{
+		"name": "Dmitrii Fediuk"
+		,"email": "admin@mage2.pro"
+		,"homepage": "https://www.upwork.com/fl/mage2pro"
+		,"role": "Developer"
+	}]
+	,"require": {"mage2pro/core": "<8.1.0", "realexpayments/hpp": ">=3.3.9"}
+	,"autoload": {"files": ["registration.php"], "psr-4": {"TFC\\Realex\\": ""}}
+	,"keywords": ["Magento 2", "Global Payments", "Realex"]
+}
