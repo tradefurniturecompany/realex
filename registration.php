@@ -1,3 +1,3 @@
 <?php
 use Magento\Framework\Component\ComponentRegistrar as R;
-R::register(R::MODULE, 'TFC_Core', __DIR__);
+R::register(R::MODULE, 'TFC_Realex', __DIR__);
