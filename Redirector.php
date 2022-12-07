@@ -5,5 +5,10 @@ namespace TFC\Realex;
 # the cart contents should be restored, and the customer should be redirected back to the Magento checkout page»:
 # https://github.com/tradefurniturecompany/realex/issues/1
 final class Redirector {
-
+	/**
+	 * 2022-12-07
+	 * https://3v4l.org/4J9n4
+	 * @var string
+	 */
+	private static $K = __CLASS__;
 }
