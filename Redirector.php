@@ -11,8 +11,8 @@ final class Redirector {
 	static function set():void {df_checkout_session()->setData(self::$K, true);}
 
 	/**
-	 * 2022-12-07
-	 * https://3v4l.org/4J9n4
+	 * 2022-12-07 https://3v4l.org/4J9n4
+	 * @used-by self::set()
 	 * @var string
 	 */
 	private static $K = __CLASS__;
