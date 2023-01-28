@@ -6,6 +6,11 @@ namespace TFC\Realex;
 # https://github.com/tradefurniturecompany/realex/issues/1
 final class Redirector {
 	/**
+	 * 2023-01-29
+	 */
+	static function is():bool {return !!df_checkout_session()->getData(self::$K);}
+
+	/**
 	 * 2022-12-07
 	 */
 	static function set():void {df_checkout_session()->setData(self::$K, true);}
@@ -13,7 +18,7 @@ final class Redirector {
 	/**
 	 * 2023-01-29
 	 */
-	static function unset() {df_checkout_session()->unsetData(self::$K);}
+	static function unset():void {df_checkout_session()->unsetData(self::$K);}
 
 	/**
 	 * 2022-12-07 https://3v4l.org/4J9n4
