@@ -7,6 +7,11 @@ namespace TFC\Realex;
 final class Redirector {
 	/**
 	 * 2022-12-07
+	 */
+	static function set():void {df_checkout_session()->setData(self::$K, true);}
+
+	/**
+	 * 2022-12-07
 	 * https://3v4l.org/4J9n4
 	 * @var string
 	 */
