@@ -11,7 +11,5 @@ final class Departure implements IO {
 	 * @see IO::execute()
 	 * @used-by \Magento\Framework\Event\Invoker\InvokerDefault::_callObserverMethod()
 	 */
-	function execute(O $o):void {
-		R::set();
-	}
+	function execute(O $o):void {R::set();}
 }
