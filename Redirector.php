@@ -32,6 +32,7 @@ final class Redirector {
 
 	/**
 	 * 2022-12-07
+	 * @used-by \TFC\Realex\Observer\Predispatch\Departure::execute()
 	 */
 	static function set():void {df_checkout_session()->setData(self::$K, true);}
 
