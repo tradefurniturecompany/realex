@@ -9,6 +9,7 @@ use Magento\Sales\Model\Order as O;
 final class Redirector {
 	/**
 	 * 2023-01-29
+	 * @used-by \TFC\Realex\Observer\Predispatch\Arrival::execute()
 	 */
 	static function is():bool {return !!df_checkout_session()->getData(self::$K);}
 
@@ -19,6 +20,7 @@ final class Redirector {
 	 * https://github.com/mage2pro/core/blob/9.2.8/Payment/CustomerReturn.php#L45-L66
 	 * 2) \Df\Payment\W\Strategy\ConfirmPending::_handle():
 	 * https://github.com/mage2pro/core/blob/9.2.8/Payment/W/Strategy/ConfirmPending.php#L124-L156
+	 * @used-by \TFC\Realex\Observer\Predispatch\Arrival::execute()
 	 */
 	static function restoreQuote():void {
 		$s = df_checkout_session(); /** @var Session $s */
@@ -38,12 +40,15 @@ final class Redirector {
 
 	/**
 	 * 2023-01-29
+	 * @used-by \TFC\Realex\Observer\Predispatch\Arrival::execute()
 	 */
 	static function unset():void {df_checkout_session()->unsetData(self::$K);}
 
 	/**
 	 * 2022-12-07 https://3v4l.org/4J9n4
+	 * @used-by self::is()
 	 * @used-by self::set()
+	 * @used-by self::unset()
 	 * @var string
 	 */
 	private static $K = __CLASS__;

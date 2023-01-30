@@ -16,12 +16,7 @@ final class Arrival implements IO {
 	 */
 	function execute(O $o):void {
 		if (R::is()) {
-			if (df_action_is('checkout_onepage_success')) {
-				R::unset();
-			}
-			else {
-				R::restoreQuote();
-			}
+			df_action_is('checkout_onepage_success') ? R::unset() : R::restoreQuote();
 		}
 	}
 }
