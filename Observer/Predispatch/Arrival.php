@@ -7,12 +7,21 @@ use TFC\Realex\Redirector as R;
 # "If the customer navigates back from the bank card payment page, the cart contents should be restored,
 # and the customer should be redirected back to the Magento checkout page":
 # https://github.com/tradefurniturecompany/realex/issues/1
-final class Departure implements IO {
+final class Arrival implements IO {
 	/**
 	 * 2023-01-30
 	 * @override
 	 * @see IO::execute()
 	 * @used-by \Magento\Framework\Event\Invoker\InvokerDefault::_callObserverMethod()
 	 */
-	function execute(O $o):void {R::set();}
+	function execute(O $o):void {
+		if (R::is()) {
+			if (df_action_is('checkout_onepage_success')) {
+				R::unset();
+			}
+			else {
+				R::restoreQuote();
+			}
+		}
+	}
 }

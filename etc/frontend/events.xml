@@ -3,6 +3,13 @@
 	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
 	xsi:noNamespaceSchemaLocation='urn:magento:framework:Event/etc/events.xsd'
 >
+<!-- 2023-01-30
+"If the customer navigates back from the bank card payment page, the cart contents should be restored,
+and the customer should be redirected back to the Magento checkout page":
+https://github.com/tradefurniturecompany/realex/issues/1 -->
+	<event name='controller_action_predispatch_checkout'>
+		<observer instance='TFC\Realex\Observer\Predispatch\Arrival' name='TFC\Realex\Observer\Predispatch\Arrival'/>
+	</event>
 	<event name='controller_action_predispatch_realexpayments_hpp_process_process'>
 		<observer instance='TFC\Realex\Observer\Predispatch\Departure' name='TFC\Realex\Observer\Predispatch\Departure'/>
 	</event>
