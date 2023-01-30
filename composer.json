@@ -1,6 +1,6 @@
 {
 	"name": "tradefurniturecompany/realex"
-	,"version": "0.0.1"
+	,"version": "1.0.0"
 	,"description": "Modifications of the `realexpayments/hpp` module (Magento 2)"
 	,"type": "magento2-module"
 	,"homepage": "https://github.com/tradefurniturecompany/realex"
